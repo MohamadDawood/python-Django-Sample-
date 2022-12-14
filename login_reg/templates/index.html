@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<a href="{% url 'login' %}">Login</a>
+<a href="{% url 'signup' %}">Signup</a>
+{% if user.is_authenticated %}
+    <p>Authenticated user</p>
+{% else %}
+        <p> user not Authenticated</p>
+{% endif %}
+
+{%endblock content%}
